@@ -1,16 +1,18 @@
-import { useState } from 'react'
-
+import { Route, Routes } from 'react-router-dom'
 import './assets/css/App.css'
+import Catalogue from './pages/Catalogue'
+import Pays from './pages/pays'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+  return(
     <>
-    <h1>Bonjour</h1>
-
+      <Routes>
+        <Route path='/' element={<Catalogue/>}/>
+        <Route path='/pays/:name' element={<Pays></Pays>}/> 
+      </Routes>
     </>
   )
+
 }
 
 export default App
